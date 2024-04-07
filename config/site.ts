@@ -4,13 +4,13 @@ import { MdEmail } from "react-icons/md";
 import { SiBuymeacoffee, SiJuejin } from "react-icons/si";
 
 const baseSiteConfig = {
-  name: "Clean Next.js Starter",
+  name: "Weekly Example",
   description:
-    "Clean Next.js Starter is a meticulously designed Next.js starter template aimed at providing developers with a clean, efficient, and scalable foundation for quickly launching.",
-  url: "https://starter.weijunext.com",
-  ogImage: "https://starter.weijunext.com/og.png",
+    "An Open-source Weekly Example",
+  url: "https://weekly.weijunext.com",
+  ogImage: "https://weekly.weijunext.com/og.png",
   metadataBase: '/',
-  keywords: ["next.js starter", "next.js template", "awesome starter", "study next.js"],
+  keywords: ["open-source weekly"],
   authors: [
     {
       name: "weijunext",

@@ -15,12 +15,10 @@ const Header = () => {
                 alt={siteConfig.name}
                 src="/logo.svg"
                 className="w-8 h-8"
-                width={32}
-                height={32}
+                width={24}
+                height={24}
               />
-              <span className="text-gray-950 dark:text-gray-300">Clean</span>
-              <span className="text-blue-600">Next.js</span>
-              <span className="text-gray-950 dark:text-gray-300">Starter</span>
+              <span className="text-gray-950 dark:text-gray-300">开源周刊</span>
             </Link>
             <div className="hidden md:flex md:gap-x-6"></div>
           </div>
