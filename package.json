@@ -16,6 +16,7 @@
     "@vercel/analytics": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dayjs": "^1.11.10",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.316.0",
     "next": "14.1.0",
