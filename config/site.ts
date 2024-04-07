@@ -30,7 +30,7 @@ const baseSiteConfig = {
     apple: "/logo.png",
   },
   headerLinks: [
-    { name: 'repo', href: "https://github.com/weijunext/clean-nextjs-starter", icon: BsGithub },
+    { name: 'repo', href: "https://github.com/weijunext/weekly", icon: BsGithub },
     { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },
     { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee }
   ],
