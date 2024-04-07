@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@next/mdx": "^14.1.4",
     "@vercel/analytics": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
