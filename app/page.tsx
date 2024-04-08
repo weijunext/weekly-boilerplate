@@ -3,7 +3,7 @@ import WeeklyList from "@/components/WeeklyList";
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:flex-row w-full pb-16 pt-24">
+    <div className="flex flex-col md:flex-row w-full pt-24">
       <div className="hidden md:block md:w-1/5"></div>
       <div className="w-full md:w-3/5">
         <WeeklyList />
