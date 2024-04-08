@@ -11,7 +11,7 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const posts: WeeklyPost[] = await getWeeklyPosts();
+  const { posts }: { posts: WeeklyPost[] } = await getWeeklyPosts();
 
   return posts.map((post) => ({
     slug: post.metadata.slug,
@@ -21,7 +21,7 @@ export async function generateStaticParams() {
 export default async function WeeklyDetailsPage({ params }: Props) {
   const { slug } = params;
 
-  const posts: WeeklyPost[] = await getWeeklyPosts();
+  const { posts }: { posts: WeeklyPost[] } = await getWeeklyPosts();
 
   const post = posts.find((post) => post.metadata.slug === slug);
 

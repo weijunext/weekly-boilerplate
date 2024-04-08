@@ -3,12 +3,13 @@ import dayjs from "dayjs";
 import Link from "next/link";
 
 export default async function WeeklyList() {
-  const posts: WeeklyPost[] = await getWeeklyPosts();
+  const { posts }: { posts: WeeklyPost[] } = await getWeeklyPosts();
 
   return (
     <ul className="flex flex-col gap-4">
       {posts.map((post) => (
         <li
+          id={post.id}
           key={post.metadata.slug}
           className="flex flex-col sm:flex-row gap-4 items-start"
         >
