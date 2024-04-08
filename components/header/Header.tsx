@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="py-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <header>
+      <div className="mx-auto max-w-4xl px-4 py-3 border-b border-gray-200">
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" className="flex items-center space-x-1 font-bold">
