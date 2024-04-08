@@ -11,7 +11,8 @@ export type WeeklyPost = {
 
 export async function getWeeklyPosts(): Promise<WeeklyPost[]> {
   const postsDirectory = path.join(process.cwd(), 'content')
-  const filenames = await fs.promises.readdir(postsDirectory)
+  let filenames = await fs.promises.readdir(postsDirectory)
+  filenames = filenames.reverse()
 
   const posts = await Promise.all(
     filenames.map(async (filename) => {
@@ -19,6 +20,7 @@ export async function getWeeklyPosts(): Promise<WeeklyPost[]> {
       const fileContents = await fs.promises.readFile(fullPath, 'utf8')
 
       const { data } = matter(fileContents)
+      console.log(data);
 
       return {
         fullPath,
