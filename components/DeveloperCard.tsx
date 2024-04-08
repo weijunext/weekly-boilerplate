@@ -17,13 +17,13 @@ export default function DeveloperCard() {
               @weijunext
             </p>
             <div className="flex gap-2 pb-1 pt-2">
-              <Chip variant="flat">前端</Chip>
-              <Chip variant="flat">全栈</Chip>
-              <Chip variant="flat">AI</Chip>
-              <Chip variant="flat">出海</Chip>
+              <Chip variant="flat">👨‍💻前端</Chip>
+              <Chip variant="flat">🛠️全栈</Chip>
+              <Chip variant="flat">✨AI</Chip>
+              <Chip variant="flat">⛵️出海</Chip>
             </div>
             <p className="py-2 text-small text-foreground">
-              👨‍💻前端🛠️全栈✨AI⛵️出海｜Next.js开源手艺人｜掘金签约作者
+              Next.js开源手艺人｜掘金签约作者｜出海鼓励师
             </p>
             <div className="w-full text-center mt-4 flex justify-evenly">
               <FollowButton
