@@ -10,13 +10,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iconify/react": "^4.1.1",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.1.4",
+    "@nextui-org/react": "^2.2.10",
     "@vercel/analytics": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
+    "framer-motion": "^11.0.25",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.316.0",
     "next": "14.1.0",
