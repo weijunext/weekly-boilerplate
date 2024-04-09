@@ -46,7 +46,6 @@ export async function getWeeklyPosts(): Promise<{ posts: WeeklyPost[]; postsByMo
     acc[month].push(post);
     return acc;
   }, {});
-  console.log(postsByMonth);
 
   return {
     posts,
