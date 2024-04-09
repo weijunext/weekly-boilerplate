@@ -23,11 +23,7 @@ interface MDXComponentsProps {
 
 const MDXComponents: MDXComponentsProps = {
   h1: (props) => (
-    <Heading
-      level={1}
-      className="text-4xl font-semibold mt-6 mb-4"
-      {...props}
-    />
+    <Heading level={1} className="text-4xl font-bold mt-6 mb-4" {...props} />
   ),
   h2: (props) => (
     <Heading
