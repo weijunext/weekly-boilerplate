@@ -1,17 +1,15 @@
 🌍 *[English](README.md) ∙ [简体中文](README-zh.md)*
 
 
-# [Weekly Example](https://weekly.weijunext.com/)
+# [Weekly Boilerplate](https://weekly.weijunext.com/)
 
-Weekly Example is a carefully designed **weekly newsletter website** template, aimed at providing a one-click startup solution for weekly newsletter businesses for both technical and non-technical users.
+Weekly Boilerplate is a carefully designed **weekly newsletter website** template, aimed at providing a one-click startup solution for weekly newsletter businesses for both technical and non-technical users.
 
 Demo address：https://weekly.weijunext.com
 
-**More features are in development, aiming to complete the full development of the starter this year.**
-
 ## Tech Stack 
 
-Weekly Example is built on the following tech stack:
+Weekly Boilerplate is built on the following tech stack:
 
 - Next.js – Frontend
 - MDX - Content writing
@@ -37,7 +35,7 @@ npm run dev
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/weekly-example&project-name=&repository-name=weekly-example&demo-title=weekly-example&demo-description=Weekly%20Example.&demo-url=https://weekly.weijunext.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/weekly-boilerplate&project-name=&repository-name=weekly-boilerplate&demo-title=weekly-boilerplate&demo-description=Weekly%20Boilerplate.&demo-url=https://weekly.weijunext.com)
 
 ## About Me
 

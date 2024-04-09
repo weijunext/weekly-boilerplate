@@ -4,9 +4,9 @@ import { MdEmail } from "react-icons/md";
 import { SiBuymeacoffee, SiJuejin } from "react-icons/si";
 
 const baseSiteConfig = {
-  name: "Weekly Example",
+  name: "Weekly Boilerplate",
   description:
-    "An Open-source Weekly Example",
+    "An Open-source Weekly Boilerplate",
   url: "https://weekly.weijunext.com",
   metadataBase: '/',
   keywords: ["open-source weekly"],
@@ -29,7 +29,7 @@ const baseSiteConfig = {
     apple: "/logo.png",
   },
   headerLinks: [
-    { name: 'repo', href: "https://github.com/weijunext/weekly-example", icon: BsGithub },
+    { name: 'repo', href: "https://github.com/weijunext/weekly-boilerplate", icon: BsGithub },
     { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },
     { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee }
   ],
@@ -44,6 +44,7 @@ const baseSiteConfig = {
   footerProducts: [
     { url: 'https://weijunext.com/', name: 'J实验室' },
     { url: 'https://smartexcel.cc/', name: 'Smart Excel' },
+    { url: 'https://weekly.weijunext.com/', name: 'Weekly Boilerplate' },
     { url: 'https://landingpage.weijunext.com/', name: 'Landing Page Boilerplate' },
     { url: 'https://nextjs.weijunext.com/', name: 'Next.js Practice' },
     { url: 'https://starter.weijunext.com/', name: 'Next.js Starter' },

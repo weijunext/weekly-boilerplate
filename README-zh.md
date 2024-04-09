@@ -1,15 +1,15 @@
 🌍 *[英文](README.md) ∙ [简体中文](README-zh.md)*
 
-# [Weekly Example](https://weekly.weijunext.com/)
+# [Weekly Boilerplate](https://weekly.weijunext.com/)
 
-Weekly Example 是一个精心设计的**周刊**网站模板，旨在为技术人员与非技术人员提供一个一键启动的周刊业务。
+Weekly Boilerplate 是一个精心设计的**周刊**网站模板，旨在为技术人员与非技术人员提供一个一键启动的周刊业务。
 
 演示地址：https://weekly.weijunext.com
 
 
 ## 技术栈
 
-Weekly Example 基于以下技术栈构建：
+Weekly Boilerplate 基于以下技术栈构建：
 
 - Next.js – 前端
 - MDX - 内容编写
@@ -34,7 +34,7 @@ npm run dev
 
 使用 [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples) 部署：
 
-[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/weekly-example&project-name=&repository-name=weekly-example&demo-title=weekly-example&demo-description=Weekly%20Example.&demo-url=https://weekly.weijunext.com)
+[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/weekly-boilerplate&project-name=&repository-name=weekly-boilerplate&demo-title=weekly-boilerplate&demo-description=Weekly%20Boilerplate.&demo-url=https://weekly.weijunext.com)
 
 ## 关于我
 
