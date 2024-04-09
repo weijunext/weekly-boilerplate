@@ -6,7 +6,7 @@ import { SiBuymeacoffee, SiJuejin } from "react-icons/si";
 const baseSiteConfig = {
   name: "Weekly Boilerplate",
   description:
-    "An Open-source Weekly Boilerplate",
+    "Weekly Boilerplate is a carefully crafted weekly newsletter website template, implemented using Next.js + MDX.",
   url: "https://weekly.weijunext.com",
   metadataBase: '/',
   keywords: ["open-source weekly"],
