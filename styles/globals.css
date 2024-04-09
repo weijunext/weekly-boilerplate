@@ -81,3 +81,12 @@ html {
     font-family: "LXGW WenKai", sans-serif;
   }
 }
+.link-hover {
+  @apply hover:text-[#ffce55]
+}
+.link-default {
+  @apply text-[#9bdbee] hover:text-[#ffce55];
+}
+.link-underline {
+  @apply text-[#9bdbee] hover:text-[#ffce55] underline;
+}

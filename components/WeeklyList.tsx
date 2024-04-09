@@ -22,7 +22,7 @@ export default async function WeeklyList({ isSide }: { isSide?: boolean }) {
           )}
           <Link
             href={`/weekly/${post.metadata.slug}`}
-            className="text-[#9bdbee] hover:text-[#ffce55] truncate transition-colors duration-500 ease-in-out"
+            className="link-default truncate transition-colors duration-500 ease-in-out"
           >
             {post.metadata.title}
           </Link>

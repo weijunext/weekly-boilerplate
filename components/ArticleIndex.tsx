@@ -27,7 +27,7 @@ const ArticleIndex = () => {
       <ul className="sticky top-0 right-0">
         {headings.map(({ text, id, level }) => (
           <li key={id} className={`my-2 ${level === "H3" ? "ml-4" : ""}`}>
-            <Link href={`#${id}`} className="hover:text-[#ffce55]">
+            <Link href={`#${id}`} className="link-hover">
               {text}
             </Link>
           </li>

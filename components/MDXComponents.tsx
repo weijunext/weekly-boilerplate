@@ -57,9 +57,7 @@ const MDXComponents: MDXComponentsProps = {
     />
   ),
   p: (props) => <p className="mt-0 mb-4" {...props} />,
-  a: (props) => (
-    <a className="text-[#9bdbee] hover:text-[#ffce55] underline" {...props} />
-  ),
+  a: (props) => <a className="link-underline" {...props} />,
   ul: (props) => <ul className="list-disc pl-5 mt-0 mb-4" {...props} />,
   ol: (props) => <ol className="list-decimal pl-5 mt-0 mb-4" {...props} />,
   li: (props) => <li className="mb-2" {...props} />,
