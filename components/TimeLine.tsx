@@ -16,13 +16,11 @@ export default async function TimeLine() {
         <h4 className="mb-4 text-sm font-medium leading-none">
           <Link href="/">时间线</Link>
         </h4>
-        {Object.keys(postsByMonth).map((month, index) => (
-          <>
-            <Link key={index} href={`#${month}`}>
-              {month}
-            </Link>
+        {Object.keys(postsByMonth).map((month) => (
+          <div key={month}>
+            <Link href={`#${month}`}>{month}</Link>
             <Separator className="my-2 bg-gray-600" />
-          </>
+          </div>
         ))}
       </div>
     </ScrollArea>

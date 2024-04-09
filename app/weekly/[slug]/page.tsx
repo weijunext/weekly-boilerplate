@@ -2,19 +2,40 @@ import ArticleIndex from "@/components/ArticleIndex";
 import MDXComponents from "@/components/MDXComponents";
 import WeeklyList from "@/components/WeeklyList";
 import { Separator } from "@/components/ui/separator";
+import { siteConfig } from "@/config/site";
 import { WeeklyPost, getWeeklyPosts } from "@/lib/getWeeklyPosts";
-import "@/styles/mdx.css";
 import dayjs from "dayjs";
 import fs from "fs";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = params;
+  const { posts }: { posts: WeeklyPost[] } = await getWeeklyPosts();
+  const post: WeeklyPost | undefined = posts.find(
+    (post) => post.metadata.slug === slug
+  );
+
+  return {
+    title: `${post?.metadata.title || "404"} | ${siteConfig.name}`,
+    description: siteConfig.description,
+    keywords: siteConfig.keywords,
+    authors: siteConfig.authors,
+    creator: siteConfig.creator,
+    icons: siteConfig.icons,
+    metadataBase: siteConfig.metadataBase,
+    openGraph: siteConfig.openGraph,
+    twitter: siteConfig.twitter,
+  };
+}
 
 export default async function WeeklyDetailsPage({ params }: Props) {
   const { slug } = params;
@@ -26,8 +47,7 @@ export default async function WeeklyDetailsPage({ params }: Props) {
   const prevPost = postIndex + 1 < posts.length ? posts[postIndex + 1] : null;
 
   if (!post) {
-    // TODO: 404
-    return <div>TODO: not found</div>;
+    notFound();
   }
 
   const { source, metadata } = await getPostDetails(post.fullPath);
@@ -47,36 +67,27 @@ export default async function WeeklyDetailsPage({ params }: Props) {
           <div>发布时间：{dayjs(metadata.date).format("YYYY-MM-DD")}</div>
           <div className="flex gap-2 flex-col sm:flex-row">
             {prevPost ? (
-              <Link
-                href={prevPost.metadata.slug}
-                className="text-[#9bdbee] hover:text-[#ffce55] underline"
-              >
+              <Link href={prevPost.metadata.slug} className="link-underline">
                 上一篇
               </Link>
             ) : (
               <></>
             )}
             {nextPost ? (
-              <Link
-                href={nextPost.metadata.slug}
-                className="text-[#9bdbee] hover:text-[#ffce55] underline"
-              >
+              <Link href={nextPost.metadata.slug} className="link-underline">
                 下一篇
               </Link>
             ) : (
               <></>
             )}
-            <Link
-              href="/"
-              className="text-[#9bdbee] hover:text-[#ffce55] underline"
-            >
+            <Link href="/" className="link-underline">
               去首页
             </Link>
             <Link
               href="https://twitter.com/weijunext/"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="text-[#9bdbee] hover:text-[#ffce55] underline"
+              className="link-underline"
             >
               Twitter/X
             </Link>

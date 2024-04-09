@@ -6,14 +6,16 @@ import { Button, Link } from "@nextui-org/react";
 export default function FollowButton({
   name,
   href,
+  target,
 }: {
   name: string;
   href: string;
+  target?: string;
 }) {
   return (
     <Button
       as={Link}
-      target="_blank"
+      target={target || "_blank"}
       className="group relative h-9 overflow-hidden bg-transparent text-small font-normal"
       color="default"
       endContent={
