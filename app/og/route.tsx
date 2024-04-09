@@ -40,14 +40,18 @@ export async function GET(request: Request) {
             alignItems: "center",
           }}
         >
-          <img
-            src={`${process.env.SITE_URL}/logo.svg`}
-            style={{
-              borderRadius: "50%",
-              width: 128,
-              height: 128,
-            }}
-          />
+          {process.env.SITE_URL ? (
+            <img
+              src={`${process.env.SITE_URL}/logo.svg`}
+              style={{
+                borderRadius: "50%",
+                width: 128,
+                height: 128,
+              }}
+            />
+          ) : (
+            <></>
+          )}
           <span>{siteConfig.name}</span>
         </div>
         <h2
