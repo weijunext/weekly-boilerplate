@@ -10,17 +10,47 @@ import "@/styles/loading.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Viewport } from "next";
 
-export const metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
-  authors: siteConfig.authors,
-  creator: siteConfig.creator,
-  icons: siteConfig.icons,
-  metadataBase: siteConfig.metadataBase,
-  openGraph: siteConfig.openGraph,
-  twitter: siteConfig.twitter,
-};
+// export const metadata = {
+//   title: siteConfig.name,
+//   description: siteConfig.description,
+//   keywords: siteConfig.keywords,
+//   authors: siteConfig.authors,
+//   creator: siteConfig.creator,
+//   icons: siteConfig.icons,
+//   metadataBase: siteConfig.metadataBase,
+//   openGraph: siteConfig.openGraph,
+//   twitter: siteConfig.twitter,
+// };
+export async function generateMetadata() {
+  const ogImageUrl = `/og?title=${siteConfig.name}}`;
+
+  return {
+    ...siteConfig,
+    title: siteConfig.name,
+    openGraph: {
+      ...siteConfig.openGraph,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+    },
+    twitter: {
+      ...siteConfig.twitter,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+    },
+  };
+}
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,
 };

@@ -9,8 +9,6 @@ Demo address：https://starter.weijunext.com
 
 **More features are in development, aiming to complete the full development of the starter this year.**
 
-[![Clean Next.js Starter](./public/og.png)](https://www.starter.weijunext.com/)
-
 ## Tech Stack 
 
 Clean Next.js Starter is built on the following stack:
@@ -47,7 +45,7 @@ s
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/clean-nextjs-starter&project-name=&repository-name=clean-nextjs-starter&demo-title=CleanNextjsStarter&demo-description=Clean%20nextjs%20starter.&demo-url=https://starter.weijunext.com&demo-image=https://starter.weijunext.com/og.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/clean-nextjs-starter&project-name=&repository-name=clean-nextjs-starter&demo-title=CleanNextjsStarter&demo-description=Clean%20nextjs%20starter.&demo-url=https://starter.weijunext.com)
 
 ## About Me
 I am a **Front-End Engineer**, **Full-Stack Practitioner**, and advocate of **AI adventism**.

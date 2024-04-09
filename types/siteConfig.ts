@@ -25,7 +25,7 @@ export type SiteConfig = {
   keywords: string[]
   authors: AuthorsConfig[]
   creator: string
-  ogImage: string
+  ogImage?: string
   headerLinks: Link[]
   footerLinks: Link[],
   footerProducts: ProductLink[]
@@ -37,7 +37,7 @@ export type SiteConfig = {
     shortcut?: string
     apple?: string
   }
-  openGraph: {
+  openGraph?: {
     type: string
     locale: string
     url: string
@@ -46,7 +46,7 @@ export type SiteConfig = {
     siteName: string
     images?: string[]
   },
-  twitter: {
+  twitter?: {
     card: string
     title: string
     description: string

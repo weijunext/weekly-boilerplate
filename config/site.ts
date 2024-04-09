@@ -8,7 +8,6 @@ const baseSiteConfig = {
   description:
     "An Open-source Weekly Example",
   url: "https://weekly.weijunext.com",
-  ogImage: "https://weekly.weijunext.com/og.png",
   metadataBase: '/',
   keywords: ["open-source weekly"],
   authors: [
@@ -62,13 +61,13 @@ export const siteConfig: SiteConfig = {
     title: baseSiteConfig.name,
     description: baseSiteConfig.description,
     siteName: baseSiteConfig.name,
-    images: [`${baseSiteConfig.url}/og.png`],
+    // images: [`${baseSiteConfig.url}/og.png`],
   },
   twitter: {
     card: "summary_large_image",
     title: baseSiteConfig.name,
     description: baseSiteConfig.description,
-    images: [`${baseSiteConfig.url}/og.png`],
+    // images: [`${baseSiteConfig.url}/og.png`],
     creator: baseSiteConfig.creator,
   },
 }

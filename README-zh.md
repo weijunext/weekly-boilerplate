@@ -6,7 +6,7 @@ Clean Next.js Starter 是一个精心设计的 Next.js 启动模板，旨在为�
 
 演示地址：https://starter.weijunext.com
 
-[![Clean Next.js Starter](./public/og.png)](https://www.starter.weijunext.com/)
+
 
 **更多功能正在开发中，目标是在今年完成启动器的全面开发。**
 
@@ -46,7 +46,7 @@ npm run dev
 
 使用 [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples) 部署：
 
-[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/clean-nextjs-starter&project-name=&repository-name=clean-nextjs-starter&demo-title=CleanNextjsStarter&demo-description=Clean%20nextjs%20starter.&demo-url=https://starter.weijunext.com&demo-image=https://starter.weijunext.com/og.png)
+[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/clean-nextjs-starter&project-name=&repository-name=clean-nextjs-starter&demo-title=CleanNextjsStarter&demo-description=Clean%20nextjs%20starter.&demo-url=https://starter.weijunext.com)
 
 ## 关于我
 我是一名**前端工程师**、**全栈实践者**，**AI降临派**。

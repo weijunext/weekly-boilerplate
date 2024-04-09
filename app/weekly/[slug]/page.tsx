@@ -23,17 +23,33 @@ export async function generateMetadata({ params }: Props) {
   const post: WeeklyPost | undefined = posts.find(
     (post) => post.metadata.slug === slug
   );
+  const ogImageUrl = `/og?title=${post?.metadata.title}}`;
 
   return {
+    ...siteConfig,
     title: `${post?.metadata.title || "404"} | ${siteConfig.name}`,
-    description: siteConfig.description,
-    keywords: siteConfig.keywords,
-    authors: siteConfig.authors,
-    creator: siteConfig.creator,
-    icons: siteConfig.icons,
-    metadataBase: siteConfig.metadataBase,
-    openGraph: siteConfig.openGraph,
-    twitter: siteConfig.twitter,
+    openGraph: {
+      ...siteConfig.openGraph,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+    },
+    twitter: {
+      ...siteConfig.twitter,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+    },
   };
 }
 
