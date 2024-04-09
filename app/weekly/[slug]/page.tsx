@@ -1,3 +1,6 @@
+import ArticleIndex from "@/components/ArticleIndex";
+import MDXComponents from "@/components/MDXComponents";
+import WeeklyList from "@/components/WeeklyList";
 import { WeeklyPost, getWeeklyPosts } from "@/lib/getWeeklyPosts";
 import "@/styles/mdx.css";
 import fs from "fs";
@@ -23,10 +26,18 @@ export default async function WeeklyDetailsPage({ params }: Props) {
   const { source, metadata } = await getPostDetails(post.fullPath);
 
   return (
-    <article className="w-full">
-      <h1>{metadata.title}</h1>
-      <MDXRemote source={source} />
-    </article>
+    <div className="flex flex-row w-full pt-12">
+      <aside className="hidden md:block md:w-1/5 pl-6 max-h-[100vh] h-full overflow-auto">
+        <WeeklyList isSide />
+      </aside>
+      <article className="w-full md:w-3/5 px-6" id={`article`}>
+        <h1>{metadata.title}</h1>
+        <MDXRemote source={source} components={MDXComponents} />
+      </article>
+      <div className="hidden md:flex flex-col justify-start md:w-1/5 pr-6">
+        <ArticleIndex />
+      </div>
+    </div>
   );
 }
 

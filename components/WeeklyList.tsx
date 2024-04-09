@@ -2,7 +2,7 @@ import { getWeeklyPosts, WeeklyPost } from "@/lib/getWeeklyPosts";
 import dayjs from "dayjs";
 import Link from "next/link";
 
-export default async function WeeklyList() {
+export default async function WeeklyList({ isSide }: { isSide?: boolean }) {
   const { posts }: { posts: WeeklyPost[] } = await getWeeklyPosts();
 
   return (
@@ -13,9 +13,13 @@ export default async function WeeklyList() {
           key={post.metadata.slug}
           className="flex flex-col sm:flex-row gap-4 items-start"
         >
-          <span className="text-[#8585a8] min-w-28">
-            {dayjs(post.metadata.date).format("YYYY-MM-DD")}
-          </span>
+          {isSide ? (
+            <></>
+          ) : (
+            <span className="text-[#8585a8] min-w-28">
+              {dayjs(post.metadata.date).format("YYYY-MM-DD")}
+            </span>
+          )}
           <Link
             href={`/weekly/${post.metadata.slug}`}
             className="text-[#9bdbee] hover:text-[#ffce55] truncate transition-colors duration-500 ease-in-out"
