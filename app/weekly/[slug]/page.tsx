@@ -24,33 +24,10 @@ export async function generateMetadata({ params }: Props) {
   const post: WeeklyPost | undefined = posts.find(
     (post) => post.metadata.slug === slug
   );
-  const ogImageUrl = `/og?title=${post?.metadata.title}}`;
 
   return {
     ...siteConfig,
     title: `${post?.metadata.title || "404"} | ${siteConfig.name}`,
-    openGraph: {
-      ...siteConfig.openGraph,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: siteConfig.name,
-        },
-      ],
-    },
-    twitter: {
-      ...siteConfig.twitter,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: siteConfig.name,
-        },
-      ],
-    },
   };
 }
 
