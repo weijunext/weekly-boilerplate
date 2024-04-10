@@ -1,10 +1,14 @@
-import { getWeeklyPosts, WeeklyPost } from "@/lib/getWeeklyPosts";
+import { WeeklyPost } from "@/lib/weekly";
 import dayjs from "dayjs";
 import Link from "next/link";
 
-export default async function WeeklyList({ isSide }: { isSide?: boolean }) {
-  const { posts }: { posts: WeeklyPost[] } = await getWeeklyPosts();
-
+export default async function WeeklyList({
+  isSide,
+  posts,
+}: {
+  isSide?: boolean;
+  posts: WeeklyPost[];
+}) {
   return (
     <ul className="flex flex-col gap-4">
       {posts.map((post) => (

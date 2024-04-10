@@ -4,10 +4,8 @@ import MDXComponents from "@/components/MDXComponents";
 import WeeklyList from "@/components/WeeklyList";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/config/site";
-import { WeeklyPost, getWeeklyPosts } from "@/lib/getWeeklyPosts";
+import { WeeklyPost, getWeeklyPosts } from "@/lib/weekly";
 import dayjs from "dayjs";
-import fs from "fs";
-import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -44,17 +42,17 @@ export default async function WeeklyDetailsPage({ params }: Props) {
     notFound();
   }
 
-  const { source, metadata } = await getPostDetails(post.fullPath);
+  const { content, metadata } = post;
 
   return (
     <div className="flex flex-row w-full pt-12">
       <aside className="hidden md:block md:w-1/5 pl-6 max-h-[100vh] h-full overflow-auto">
-        <WeeklyList isSide />
+        <WeeklyList isSide posts={posts} />
       </aside>
       <div className="w-full md:w-3/5 px-6">
         <article id={`article`}>
           <h1>{metadata.title}</h1>
-          <MDXRemote source={source} components={MDXComponents} />
+          <MDXRemote source={content} components={MDXComponents} />
         </article>
         <Separator className="my-12 bg-gray-600" />
         <div className="flex justify-between">
@@ -102,18 +100,4 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.metadata.slug,
   }));
-}
-
-async function getPostDetails(fullPath: string): Promise<{
-  source: string;
-  metadata: { [key: string]: any };
-}> {
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-
-  const { content, data } = matter(fileContents);
-
-  return {
-    source: content,
-    metadata: data,
-  };
 }

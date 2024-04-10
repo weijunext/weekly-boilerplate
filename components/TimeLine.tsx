@@ -1,12 +1,13 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { getWeeklyPosts, PostsByMonth } from "@/lib/getWeeklyPosts";
+import { PostsByMonth } from "@/lib/weekly";
 import Link from "next/link";
 
-export default async function TimeLine() {
-  const { postsByMonth }: { postsByMonth: PostsByMonth } =
-    await getWeeklyPosts();
-
+export default async function TimeLine({
+  postsByMonth,
+}: {
+  postsByMonth: PostsByMonth;
+}) {
   return (
     <ScrollArea
       className="h-72 w-32 rounded-md border border-gray-600 sticky top-0"

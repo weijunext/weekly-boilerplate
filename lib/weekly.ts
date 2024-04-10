@@ -8,7 +8,8 @@ export type WeeklyPost = {
   fullPath: string
   metadata: {
     [key: string]: any
-  }
+  },
+  content: string
 }
 
 export type PostsByMonth = {
@@ -25,13 +26,14 @@ export async function getWeeklyPosts(): Promise<{ posts: WeeklyPost[]; postsByMo
       const fullPath = path.join(postsDirectory, filename)
       const fileContents = await fs.promises.readFile(fullPath, 'utf8')
 
-      const { data } = matter(fileContents)
+      const { data, content } = matter(fileContents)
       const month = dayjs(data.date).format('YYYY-MM-DD').slice(0, 7);
 
       return {
         id: month,
         fullPath,
         metadata: data,
+        content,
       }
     })
   )
