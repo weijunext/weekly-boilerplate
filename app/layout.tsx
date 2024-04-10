@@ -12,6 +12,7 @@ import { Viewport } from "next";
 
 export const metadata = {
   ...siteConfig,
+  title: siteConfig.name,
 };
 
 export const viewport: Viewport = {
