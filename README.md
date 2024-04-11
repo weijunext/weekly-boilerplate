@@ -7,6 +7,8 @@ Weekly Boilerplate is a carefully designed **weekly newsletter website** templat
 
 Demo address：https://weekly.weijunext.com
 
+Blog: [Next.js+MDX手撸周刊/博客网站](https://juejin.cn/post/7355845238907486271)
+
 ## Tech Stack 
 
 Weekly Boilerplate is built on the following tech stack:
