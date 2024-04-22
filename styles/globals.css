@@ -9,6 +9,14 @@ html {
  
 @layer base {
   :root {
+    /* #9bdbee */
+    --main:  194, 70.9%, 77.1%;
+    --main-foreground:  210, 80%, 88%;
+
+    /* #ffce55 */
+    --mainHover:  43, 100%, 66.7%;
+    --mainHover-foreground:  60, 100%, 80%;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -41,6 +49,14 @@ html {
   }
  
   .dark {
+    /* #9bdbee */
+    --main:  194, 70.9%, 77.1%;
+    --main-foreground:  210, 80%, 88%;
+
+    /* #ffce55 */
+    --mainHover:  43, 100%, 66.7%;
+    --mainHover-foreground:  60, 100%, 80%;
+
     --background: 231 14% 18%;
     --foreground: 210 40% 98%;
   
@@ -71,7 +87,7 @@ html {
   }
   
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -82,13 +98,13 @@ html {
   }
 }
 .link-hover {
-  @apply hover:text-[#ffce55]
+  @apply hover:text-mainHover
 }
 .link-default {
-  @apply text-[#9bdbee] hover:text-[#ffce55];
+  @apply text-main hover:text-mainHover;
 }
 .link-underline {
-  @apply text-[#9bdbee] hover:text-[#ffce55] underline;
+  @apply text-main hover:text-mainHover underline;
 }
 h1 {
   @apply text-4xl font-bold mt-6 mb-4
