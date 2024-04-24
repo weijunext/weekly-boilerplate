@@ -1,5 +1,7 @@
 import HeaderLinks from "@/components/header/HeaderLinks";
+import SearchBar from "@/components/header/SearchBar";
 import { siteConfig } from "@/config/site";
+import { doSearch } from "@/lib/search";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +25,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center">
+            <SearchBar doSearch={doSearch as any} />
             <HeaderLinks />
             {/* <ThemedButton /> */}
           </div>
