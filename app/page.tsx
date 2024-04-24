@@ -1,7 +1,8 @@
 import DeveloperCard from "@/components/DeveloperCard";
 import TimeLine from "@/components/TimeLine";
 import WeeklyList from "@/components/WeeklyList";
-import { PostsByMonth, WeeklyPost, getWeeklyPosts } from "@/lib/weekly";
+import { getWeeklyPosts } from "@/lib/weekly";
+import { PostsByMonth, WeeklyPost } from "@/types/weekly";
 
 export default async function Home() {
   const {

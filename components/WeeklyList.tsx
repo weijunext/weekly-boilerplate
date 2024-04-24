@@ -1,4 +1,4 @@
-import { WeeklyPost } from "@/lib/weekly";
+import { WeeklyPost } from "@/types/weekly";
 import dayjs from "dayjs";
 import Link from "next/link";
 

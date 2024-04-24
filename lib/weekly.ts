@@ -1,20 +1,8 @@
+import { PostsByMonth, WeeklyPost } from '@/types/weekly';
 import dayjs from 'dayjs';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-
-export type WeeklyPost = {
-  id?: string
-  fullPath: string
-  metadata: {
-    [key: string]: any
-  },
-  content: string
-}
-
-export type PostsByMonth = {
-  [key: string]: WeeklyPost[];
-}
 
 export async function getWeeklyPosts(): Promise<{ posts: WeeklyPost[]; postsByMonth: PostsByMonth }> {
   const postsDirectory = path.join(process.cwd(), 'content')
