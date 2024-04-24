@@ -39,6 +39,18 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/weekly-boilerplate&project-name=&repository-name=weekly-boilerplate&demo-title=weekly-boilerplate&demo-description=Weekly%20Boilerplate.&demo-url=https://weekly.weijunext.com)
 
+
+## TODO List
+
+- [x] SSG rendering for weekly/blog
+- [x] Article indexing
+- [x] Comment functionality
+- [x] Search functionality (partial)
+- [ ] Clicking on search results should navigate and scroll to the selected position
+- [ ] Display only one line for each search result item
+
+
+
 ## About Me
 
 **Full-Stack Engineer, Open-Source Next.js Artist & AI Enthusiast.**

@@ -38,6 +38,15 @@ npm run dev
 
 [![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/weekly-boilerplate&project-name=&repository-name=weekly-boilerplate&demo-title=weekly-boilerplate&demo-description=Weekly%20Boilerplate.&demo-url=https://weekly.weijunext.com)
 
+
+## 功能开发列表
+- [x] 周刊/博客的 SSG 渲染
+- [x] 文章索引
+- [x] 评论功能
+- [x] 搜索功能(部分)
+- [ ] 搜索结果点击可跳转并滚动到选中位置
+- [ ] 搜索结果每一条内容只显示一行
+
 ## 关于我
 
 **Full-Stack Engineer, Open-Source Next.js Artist & AI Enthusiast.**
