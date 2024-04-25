@@ -1,6 +1,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { PostsByMonth } from "@/lib/weekly";
+import { PostsByMonth } from "@/types/weekly";
 import Link from "next/link";
 
 export default async function TimeLine({
