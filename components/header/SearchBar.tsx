@@ -43,12 +43,11 @@ const SearchBar = ({ doSearch }: SearchBarProps) => {
       }
       setLoading(true);
       try {
-        console.log("value", value);
+        handleSearch(value);
       } catch (e) {
         setError(true);
       }
       setLoading(false);
-      handleSearch(value);
     },
     [loading]
   );
