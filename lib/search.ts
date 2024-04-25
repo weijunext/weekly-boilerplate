@@ -22,8 +22,10 @@ const loadIndex = async () => {
   // Iterate over each JSON file, read the data, and import it into sectionIndex
   for (let i = 0, key; i < keys.length; i += 1) {
     key = keys[i]
+
     const fullPath = `${JSON_PATH}${key}.json`
     const data = fs.readFileSync(fullPath, 'utf8')
+    console.log('search data', data);
 
     sectionIndex.import(key, data ?? null)
   }
