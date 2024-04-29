@@ -25,7 +25,6 @@ const loadIndex = async () => {
 
     const fullPath = `${JSON_PATH}${key}.json`
     const data = fs.readFileSync(fullPath, 'utf8')
-    console.log('search data', data);
 
     sectionIndex.import(key, data ?? null)
   }
@@ -39,6 +38,7 @@ loadIndex()
  * @returns {Promise<Array>} 搜索结果的 Promise 对象 A Promise object containing the search results
  */
 const doSearch = async (value: string) => {
+
   if (!value) {
     return
   }
