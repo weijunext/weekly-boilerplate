@@ -1,12 +1,12 @@
 
 export type WeeklyPost = {
   id?: string
-  fullPath?: string
+  slug?: string
+  title?: string
+  content: string
   metadata: {
     [key: string]: any
   },
-  title?: string
-  content: string
 }
 
 export type PostsByMonth = {

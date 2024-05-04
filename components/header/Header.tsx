@@ -1,11 +1,11 @@
 import HeaderLinks from "@/components/header/HeaderLinks";
 import SearchBar from "@/components/header/SearchBar";
 import { siteConfig } from "@/config/site";
-import { doSearch } from "@/lib/search";
+import { WeeklyPost } from "@/types/weekly";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ posts }: { posts: WeeklyPost[] }) => {
   return (
     <header>
       <div className="mx-auto max-w-4xl px-4 py-3 border-b border-gray-600">
@@ -25,7 +25,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center">
-            <SearchBar doSearch={doSearch as any} />
+            <SearchBar posts={posts} />
             <HeaderLinks />
             {/* <ThemedButton /> */}
           </div>

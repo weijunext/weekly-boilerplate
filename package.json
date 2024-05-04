@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node ./lib/generateIndex.mjs && next dev",
+    "dev": "next dev",
     "postbuild": "next-sitemap",
-    "build": "node ./lib/generateIndex.mjs && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },

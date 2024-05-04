@@ -1,8 +1,8 @@
-
-export type StructurizedData = Record<string, string>;
-export type SearchData = {
-  [route: string]: {
+export interface SearchResult {
+  id: string;
+  doc: {
     title: string;
-    data: StructurizedData;
+    content: string;
+    display: string;
   };
-};
+}

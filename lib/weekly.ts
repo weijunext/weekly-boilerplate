@@ -19,8 +19,9 @@ export async function getWeeklyPosts(): Promise<{ posts: WeeklyPost[]; postsByMo
 
       return {
         id: month,
-        fullPath,
-        metadata: data,
+        metadata: data, // slug/url title date
+        title: data.title,
+        slug: data.slug,
         content,
       }
     })
@@ -28,7 +29,6 @@ export async function getWeeklyPosts(): Promise<{ posts: WeeklyPost[]; postsByMo
 
   // Group by month
   const postsByMonth: PostsByMonth = posts.reduce((acc: PostsByMonth, post: WeeklyPost) => {
-
     const month = dayjs(post.metadata.date).format('YYYY-MM-DD').slice(0, 7);
     if (!acc[month]) {
       acc[month] = [];
