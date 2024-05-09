@@ -1,6 +1,6 @@
-import ArticleIndex from "@/components/ArticleIndex";
 import Comments from "@/components/Comments";
 import MDXComponents from "@/components/MDXComponents";
+import TOC from "@/components/TOC";
 import WeeklyList from "@/components/WeeklyList";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/config/site";
@@ -89,7 +89,7 @@ export default async function WeeklyDetailsPage({ params }: Props) {
         <Comments />
       </div>
       <div className="hidden md:flex flex-col justify-start md:w-1/5 pr-6">
-        <ArticleIndex />
+        <TOC />
       </div>
     </div>
   );
