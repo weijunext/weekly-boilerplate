@@ -10,11 +10,43 @@ import dayjs from "dayjs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 
 type Props = {
   params: {
     slug: string;
   };
+};
+
+const options = {
+  parseFrontmatter: true,
+  mdxOptions: {
+    remarkPlugins: [remarkGfm, remarkMath],
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          keepBackground: false,
+          defaultLang: {
+            block: "typescript",
+            inline: "javascript",
+          },
+          // getHighlighter: (options) =>
+          //   getHighlighter({
+          //     ...options,
+          //     paths: {
+          //       themes: "https://cdn.jsdelivr.net/npm/shiki@latest/themes",
+          //       wasm: "https://cdn.jsdelivr.net/npm/shiki@latest/dist",
+          //       languages:
+          //         "https://cdn.jsdelivr.net/npm/shiki@latest/languages",
+          //     },
+          //   }),
+        },
+      ],
+    ],
+  },
 };
 
 export async function generateMetadata({ params }: Props) {
@@ -53,7 +85,11 @@ export default async function WeeklyDetailsPage({ params }: Props) {
       <div className="w-full md:w-3/5 px-6">
         <article id={`article`}>
           <h1>{metadata.title}</h1>
-          <MDXRemote source={content} components={MDXComponents} />
+          <MDXRemote
+            source={content}
+            components={MDXComponents}
+            options={options as any}
+          />
         </article>
         <Separator className="my-12 bg-gray-600" />
         <div className="flex justify-between">
