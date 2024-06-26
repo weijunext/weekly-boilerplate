@@ -8,6 +8,9 @@ Weekly Boilerplate 是一个精心设计的**周刊**网站模板，旨在为技
 
 设计开发拆解文章：[Next.js+MDX手撸周刊/博客网站](https://juejin.cn/post/7355845238907486271)
 
+使用本模板的网站：
+- J 实验室：https://weijunext.com 
+- 信息差周刊：https://gapis.money
 
 ## 技术栈
 
