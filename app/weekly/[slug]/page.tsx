@@ -78,7 +78,7 @@ export default async function WeeklyDetailsPage({ params }: Props) {
   const { content, metadata } = post;
 
   return (
-    <div className="flex flex-row w-full pt-12">
+    <div className="flex flex-row w-full pt-0">
       <aside className="hidden md:block md:w-1/5 pl-6 max-h-[100vh] h-full overflow-auto sticky top-0 left-0">
         <WeeklyList isSide posts={posts} />
       </aside>
