@@ -9,9 +9,12 @@ Demo address：https://weekly.weijunext.com
 
 Blog: [Next.js+MDX手撸周刊/博客网站](https://juejin.cn/post/7355845238907486271)
 
+## Showcase
 Use this boilerplate website：
-- J Blog：https://weijunext.com 
-- 信息差周刊：https://gapis.money
+- J Blog: https://weijunext.com/
+- 信息差周刊: https://gapis.money/
+- Developer.lulu: https://lulubiu.com/
+- Tuntun Blog: https://me.tuntun.site/
 
 ## Tech Stack 
 
