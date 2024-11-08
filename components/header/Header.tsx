@@ -1,5 +1,6 @@
+import DocSearch from "@/components/DocSearch";
 import HeaderLinks from "@/components/header/HeaderLinks";
-import SearchBar from "@/components/header/SearchBar";
+import { docSearchConfig } from "@/config/docSearch";
 import { siteConfig } from "@/config/site";
 import { WeeklyPost } from "@/types/weekly";
 import Image from "next/image";
@@ -24,7 +25,9 @@ const Header = ({ posts }: { posts: WeeklyPost[] }) => {
         </div>
 
         <div className="flex items-center">
-          <SearchBar posts={posts} />
+          {/* <SearchBar posts={posts} /> */}
+          {docSearchConfig.docSearch.appId ? <DocSearch /> : <></>}
+
           <HeaderLinks />
           {/* <ThemedButton /> */}
         </div>
