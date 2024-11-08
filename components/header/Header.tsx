@@ -1,6 +1,6 @@
 import DocSearch from "@/components/DocSearch";
+import { docSearchConfig } from "@/components/DocSearch/docSearch";
 import HeaderLinks from "@/components/header/HeaderLinks";
-import { docSearchConfig } from "@/config/docSearch";
 import { siteConfig } from "@/config/site";
 import { WeeklyPost } from "@/types/weekly";
 import Image from "next/image";
