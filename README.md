@@ -12,7 +12,7 @@ Blog: [Next.js+MDX手撸周刊/博客网站](https://juejin.cn/post/735584523890
 ## Showcase
 Use this boilerplate website：
 - J Blog: https://weijunext.com/
-- 信息差周刊: https://gapis.money/
+- 信息差周刊: https://gap.weijunext.com/
 - Developer.lulu: https://lulubiu.com/
 - Tuntun Blog: https://me.tuntun.site/
 

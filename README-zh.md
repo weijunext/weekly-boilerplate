@@ -11,7 +11,7 @@ Weekly Boilerplate 是一个精心设计的**周刊**网站模板，旨在为技
 ## 示例
 使用本模板的网站：
 - J 实验室: https://weijunext.com/
-- 信息差周刊: https://gapis.money/
+- 信息差周刊: https://gap.weijunext.com/
 - Developer.lulu 的个人博客: https://lulubiu.com/
 - Tuntun Blog: https://me.tuntun.site/
 
